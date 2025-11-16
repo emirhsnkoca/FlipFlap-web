@@ -8,10 +8,9 @@ import { useFrame } from "@react-three/fiber";
 
 interface AnimatedChickModelProps {
   url: string;
-  onModelReady?: (group: THREE.Group) => void;
 }
 
-export function AnimatedChickModel({ url, onModelReady }: AnimatedChickModelProps) {
+export function AnimatedChickModel({ url }: AnimatedChickModelProps) {
   const [model, setModel] = useState<THREE.Group | null>(null);
   const [mixer, setMixer] = useState<THREE.AnimationMixer | null>(null);
   const [animations, setAnimations] = useState<THREE.AnimationClip[]>([]);
@@ -80,11 +79,6 @@ export function AnimatedChickModel({ url, onModelReady }: AnimatedChickModelProp
       });
 
       setModel(fbx);
-      
-      // Model hazır, callback çağır
-      if (onModelReady) {
-        onModelReady(fbx);
-      }
     });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url]);
@@ -124,13 +118,6 @@ export function AnimatedChickModel({ url, onModelReady }: AnimatedChickModelProp
     mixer.addEventListener('finished', onFinished);
   };
 
-  // Fonksiyonu dışarı aktar
-  useEffect(() => {
-    if (model) {
-      (model as any).playHitAnimation = playHitAnimation;
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [model, mixer, animations]);
 
   // Animasyon güncelleme
   useFrame((state, delta) => {
@@ -148,6 +135,23 @@ export function AnimatedChickModel({ url, onModelReady }: AnimatedChickModelProp
     );
   }
 
-  return <primitive object={model} />;
+  return (
+    <primitive 
+      object={model} 
+      onClick={(e: any) => {
+        e.stopPropagation();
+        playHitAnimation();
+        console.log('💥 Civcive tıklandı!');
+      }}
+      onPointerOver={(e: any) => {
+        e.stopPropagation();
+        document.body.style.cursor = 'pointer';
+      }}
+      onPointerOut={(e: any) => {
+        e.stopPropagation();
+        document.body.style.cursor = 'default';
+      }}
+    />
+  );
 }
 
