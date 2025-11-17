@@ -1,6 +1,6 @@
-# FlipFlop Web - Landing Page
+# FlipFlap Web - Landing Page
 
-FlipFlop oyununun resmi web sitesi. Sui Blockchain üzerinde çalışan Web3 tabanlı island-building oyunu.
+FlipFlap oyununun resmi web sitesi. Sui Blockchain üzerinde çalışan Web3 tabanlı island-building oyunu.
 
 ## 🚀 Teknolojiler
 
@@ -33,7 +33,7 @@ Tarayıcıda açın: [http://localhost:3000](http://localhost:3000)
 ## 📁 Proje Yapısı
 
 ```
-flipflop-web/
+flipflap-web/
 ├── app/
 │   ├── layout.tsx      # Ana layout
 │   ├── page.tsx        # Ana sayfa

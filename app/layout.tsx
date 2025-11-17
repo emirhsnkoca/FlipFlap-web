@@ -1,12 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Fredoka, Lilita_One } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const fredoka = Fredoka({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-fredoka"
+});
+const lilitaOne = Lilita_One({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-lilita"
+});
 
 export const metadata: Metadata = {
-  title: "FlipFlop - Build Your Island on Sui Blockchain",
-  description: "Chop trees, gather wood, expand your island and earn Web3 rewards in the world of FlipFlop!",
+  title: "FlipFlap",
+  description: "Chop trees, gather wood, expand your island and earn Web3 rewards in the world of FlipFlap!",
+  icons: {
+    icon: '/icon.png',
+    apple: '/icon.png',
+  },
 };
 
 export default function RootLayout({
@@ -16,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${fredoka.variable} ${lilitaOne.variable}`}>{children}</body>
     </html>
   );
 }

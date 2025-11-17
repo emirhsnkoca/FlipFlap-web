@@ -1,16 +1,16 @@
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-white to-gray-50 border-t border-gray-200">
+    <footer className="bg-gradient-to-b from-emerald-50 to-sky-50 border-t-4 border-primary-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand Section */}
           <div className="text-center md:text-left">
-            <div className="text-2xl font-bold text-primary-600 mb-3">
-              🐣 FlipFlop
+            <div className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-3">
+              🏝️ FlipFlap
             </div>
-            <p className="text-gray-600 text-sm">
-              Build your island, earn rewards on Sui Blockchain
+            <p className="text-gray-700 text-sm font-medium">
+              🌳 Build your island, 🎮 earn rewards on Sui Blockchain
             </p>
           </div>
 
@@ -51,33 +51,33 @@ export default function Footer() {
             <div className="flex items-center justify-center md:justify-end gap-4">
               <a
                 href="#"
-                className="w-10 h-10 bg-primary-100 hover:bg-primary-200 rounded-full flex items-center justify-center transition-all transform hover:scale-110"
+                className="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 hover:from-primary-500 hover:to-primary-700 rounded-full flex items-center justify-center transition-all transform hover:scale-110 shadow-lg"
                 aria-label="Discord"
               >
-                <span className="text-xl">💬</span>
+                <span className="text-2xl">💬</span>
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-secondary-100 hover:bg-secondary-200 rounded-full flex items-center justify-center transition-all transform hover:scale-110"
+                className="w-12 h-12 bg-gradient-to-br from-secondary-400 to-secondary-600 hover:from-secondary-500 hover:to-secondary-700 rounded-full flex items-center justify-center transition-all transform hover:scale-110 shadow-lg"
                 aria-label="Twitter"
               >
-                <span className="text-xl">🐦</span>
+                <span className="text-2xl">🐦</span>
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-primary-100 hover:bg-primary-200 rounded-full flex items-center justify-center transition-all transform hover:scale-110"
+                className="w-12 h-12 bg-gradient-to-br from-accent-400 to-accent-600 hover:from-accent-500 hover:to-accent-700 rounded-full flex items-center justify-center transition-all transform hover:scale-110 shadow-lg"
                 aria-label="Telegram"
               >
-                <span className="text-xl">✈️</span>
+                <span className="text-2xl">✈️</span>
               </a>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-200 pt-6 text-center">
-          <p className="text-gray-600 text-sm">
-            © 2025 FlipFlop. All Rights Reserved.
+        <div className="border-t-2 border-primary-200 pt-6 text-center">
+          <p className="text-gray-700 text-sm font-medium">
+            © 2025 🏝️ <span className="font-bold text-primary-600">FlipFlap</span>. All Rights Reserved. Built with 💚
           </p>
         </div>
       </div>

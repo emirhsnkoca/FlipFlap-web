@@ -35,37 +35,37 @@ export default function Header() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <div className="flex items-center">
-            <div className="text-2xl sm:text-3xl font-bold text-primary-600 cursor-pointer hover:scale-105 transition-transform">
-              🐣 FlipFlop
+          <div className="flex items-center gap-3 cursor-pointer">
+            <img 
+              src="/FlipFlap-logo.png" 
+              alt="FlipFlap Logo" 
+              className="h-14 sm:h-16 w-14 sm:w-16 rounded-full object-cover shadow-xl"
+            />
+            <div className="text-4xl sm:text-5xl font-lilita drop-shadow-lg">
+              <span className="text-yellow-400">Flip</span>
+              <span className="text-green-600">Flap</span>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a
-              href="#about"
-              className="text-gray-700 hover:text-primary-600 transition-colors font-medium"
+              href="#howtoplay"
+              className="text-gray-700 hover:text-primary-600 transition-colors font-semibold text-base"
             >
-              About
+              How to Play
             </a>
             <a
               href="#features"
-              className="text-gray-700 hover:text-primary-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-primary-600 transition-colors font-semibold text-base"
             >
               Features
             </a>
             <a
               href="#roadmap"
-              className="text-gray-700 hover:text-primary-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-primary-600 transition-colors font-semibold text-base"
             >
               Roadmap
-            </a>
-            <a
-              href="#community"
-              className="text-gray-700 hover:text-primary-600 transition-colors font-medium"
-            >
-              Community
             </a>
           </div>
 
@@ -92,13 +92,13 @@ export default function Header() {
             </svg>
           </button>
 
-          {/* CTA Button - Desktop */}
+          {/* Play Button - Desktop */}
           <div className="hidden md:block">
             <button
               onClick={scrollToTop}
-              className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-bubble font-semibold hover:from-primary-600 hover:to-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
+              className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-3 rounded-bubble font-bold hover:from-primary-600 hover:to-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-base"
             >
-              Play Now
+              🎮 Play
             </button>
           </div>
         </div>
@@ -108,38 +108,31 @@ export default function Header() {
           <div className="md:hidden py-4 border-t border-gray-200 mt-2 animate-fadeIn">
             <div className="flex flex-col space-y-4">
               <a
-                href="#about"
+                href="#howtoplay"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-gray-700 hover:text-primary-600 transition-colors font-medium py-2"
+                className="text-gray-700 hover:text-primary-600 transition-colors font-semibold py-2 text-base"
               >
-                About
+                How to Play
               </a>
               <a
                 href="#features"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-gray-700 hover:text-primary-600 transition-colors font-medium py-2"
+                className="text-gray-700 hover:text-primary-600 transition-colors font-semibold py-2 text-base"
               >
                 Features
               </a>
               <a
                 href="#roadmap"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-gray-700 hover:text-primary-600 transition-colors font-medium py-2"
+                className="text-gray-700 hover:text-primary-600 transition-colors font-semibold py-2 text-base"
               >
                 Roadmap
               </a>
-              <a
-                href="#community"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-gray-700 hover:text-primary-600 transition-colors font-medium py-2"
-              >
-                Community
-              </a>
               <button
                 onClick={scrollToTop}
-                className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-3 rounded-bubble font-semibold hover:from-primary-600 hover:to-primary-700 transition-all duration-300 shadow-lg text-center"
+                className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-6 py-3 rounded-bubble font-bold hover:from-primary-600 hover:to-primary-700 transition-all duration-300 shadow-lg text-center"
               >
-                Play Now
+                🎮 Play
               </button>
             </div>
           </div>
