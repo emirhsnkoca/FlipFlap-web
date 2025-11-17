@@ -38,7 +38,7 @@ export function AnimatedChickModel({ url }: AnimatedChickModelProps) {
       const box = new THREE.Box3().setFromObject(fbx);
       const size = box.getSize(new THREE.Vector3());
       const maxDim = Math.max(size.x, size.y, size.z);
-      const scale = 3.5 / maxDim;
+      const scale = 5.5 / maxDim;
       
       fbx.scale.setScalar(scale);
       
